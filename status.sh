@@ -159,8 +159,8 @@ Write_server_config(){
 {"servers":
  [
   {
-   "username": "username01",
-   "password": "password",
+   "username": "qazCloud",
+   "password": "qazCloud",
    "name": "Server 01",
    "type": "KVM",
    "host": "MineCloud",
@@ -184,7 +184,7 @@ Set_server(){
 	[[ -z ${mode} ]] && mode="server"
 	if [[ ${mode} == "server" ]]; then
 		echo -e "请输入 ServerStatus 服务端中网站要设置的 域名[server]
-默认为本机IP为域名，例如输入: toyoo.ml，如果要使用本机IP，请留空直接回车"
+默认为本机IP为域名，例如输入: www.qaz.cloud，如果要使用本机IP，请留空直接回车"
 		stty erase '^H' && read -p "(默认: 本机IP):" server_s
 		[[ -z "$server_s" ]] && server_s=""
 	else
@@ -201,8 +201,8 @@ Set_server_port(){
 	while true
 		do
 		echo -e "请输入 ServerStatus 服务端中网站要设置的 域名/IP的端口[1-65535]（如果是域名的话，一般建议用 80 端口）"
-		stty erase '^H' && read -p "(默认: 8888):" server_port_s
-		[[ -z "$server_port_s" ]] && server_port_s="8888"
+		stty erase '^H' && read -p "(默认: 80):" server_port_s
+		[[ -z "$server_port_s" ]] && server_port_s="80"
 		expr ${server_port_s} + 0 &>/dev/null
 		if [[ $? -eq 0 ]]; then
 			if [[ ${server_port_s} -ge 1 ]] && [[ ${server_port_s} -le 65535 ]]; then
