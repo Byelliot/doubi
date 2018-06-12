@@ -340,7 +340,7 @@ adbyby.sh
 
 ### 下载安装:
 ``` bash
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/adbyby.sh && chmod +x adbyby.sh && bash adbyby.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/xcxnig/doubi/master/adbyby.sh && chmod +x adbyby.sh && bash adbyby.sh
 ```
 
 libsodium.sh
